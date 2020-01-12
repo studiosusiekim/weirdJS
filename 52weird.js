@@ -1,5 +1,5 @@
 
-// underscoreJS Library
+// underscore JS Library 
 // underscore.js implements a lot of functional programming concepts.
 // https://underscorejs.org/docs/underscore.html
 
