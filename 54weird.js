@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> e741103dd8ba7774cc20b877188dba359c842ea9
 // Object Oriented Javascript and Prototypal Inheritance
 // 53 Conceptual Aside: Classical vs Prototypal Inheritance
 
