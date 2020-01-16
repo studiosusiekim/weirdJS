@@ -1,0 +1,42 @@
+ 
+[2020-01-16]
+Notes: 59. Dangerous Aside: 'new' and functions
+Ideas: What happens if you forget to set the new keyword?
+
+
+[javascript]
+
+function actionHero(firstname, lastname) {		
+    this.firstname = firstname;
+    this.lastname = lastname;
+}
+
+
+
+actionHero.prototype.getFullname = function() {
+    return this.firstname + ' ' + this.lastname;
+}
+
+const sly =  actionHero('Sylvester', 'Stallone');
+
+[end]
+
+It will let you execute it as the constructor function is a function and as it doesn't return anything, it returns undefined.
+
+ The sly object will set equal to undefined.
+And when we try to use any properties or methods on that object since it's undefined we'll get an error.
+
+But, function constructors are only there in the first place to try to appease syntactically programmers coming from other languages.
+
+Any function that we intend to be a function constructor, we use a capital letter for its name
+
+[javascript]
+
+ function ActionHero(firstname, lastname) {		
+     this.firstname = firstname;
+     this.lastname = lastname;
+ }
+
+const sly =  ActionHero('Sylvester', 'Stallone');
+
+[end]
