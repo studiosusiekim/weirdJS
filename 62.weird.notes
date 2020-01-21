@@ -1,0 +1,46 @@
+[2020-01-21]
+
+Notes: 62. Dangerous Aside: Arrays and for..in
+Ideas:
+In case of arrays dont use for..in instead use the standard for loop because arrays are objects and you could iterate down into the prototype.
+
+
+The for...in statement 
+Example with an object :
+[javascript]
+const object = {a: 1, b: 2, c: 3};
+
+for (const prop in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+
+[end]
+
+
+
+
+Line 35 is an object literal and it is literally calling an object.
+const friendsArr prototype points at  Array.prototype. So it will add the new property myCustomFeature to the log.
+
+Example with an array :
+[javascript]
+
+Array.prototype.myCustomFeature = 'cool!';
+
+const friendsArr = ['Ross', 'Joey', 'Chandelier']; 
+
+for (const prop in arr) {
+    console.log(`${prop}: ${object[prop]}`);
+}
+// expected output:
+// 0: Ross
+// 1: Joey
+// 2: Chandelier
+myCustomFeature: cool!
+
+[end]
