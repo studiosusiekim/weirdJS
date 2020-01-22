@@ -1,0 +1,59 @@
+[2020-01-22]
+Notes: Object.create and pure prototypal Inheritance
+Ideas:
+
+Function constructors were designed to mimic other languages that don't implement prototypical inheritance.
+
+Another way to create objects that doesn't try to mimic other
+
+programming languages, and it's something that newer browsers all have built in.
+
+It's called Object.create.
+
+[javascript]
+
+const person = {
+    firstname = 'Default',
+    lastname = 'Default',
+    greet: function() {
+        return `Hi ${this.firstname}` 
+    }
+}
+
+
+
+const atlas = Object.create(person);
+console.log(atlas);
+
+[end]
+
+It logs an empty object and the prototype is the person object. 
+
+Object.create creates an empty object with it's prototype pointing to what we passed into Object.create.
+
+[javascript]
+
+atlas.greet(); // Hi Default
+atlas.firstname = 'Atlas';
+atlas.lastname = 'Kim'
+atlas.greet // Hi Atlas
+
+
+[end]
+
+Now we can override the properties and methods by adding new assignments.
+
+JavaScript engine travels down the prototype chain looking for a property or method until it finds it. 
+
+From person Object to atlas object.
+
+We simply make objects and then create new objects from them pointing to other objects as their prototype.
+
+If We want to define a new object,
+we create a new object that becomes the basis for all others.
+
+
+
+
+
+
