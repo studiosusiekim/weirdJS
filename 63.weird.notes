@@ -5,10 +5,10 @@ Ideas:
 Function constructors were designed to mimic other languages that don't implement prototypical inheritance.
 
 Another way to create objects that doesn't try to mimic other
-
 programming languages, and it's something that newer browsers all have built in.
 
-It's called Object.create.
+It's called Object.create
+.
 
 [javascript]
 
@@ -18,6 +18,8 @@ const person = {
     greet: function() {
         return `Hi ${this.firstname}` 
     }
+
+
 }
 
 
