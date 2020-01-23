@@ -18,11 +18,7 @@ const person = {
     greet: function() {
         return `Hi ${this.firstname}` 
     }
-
-
 }
-
-
 
 const atlas = Object.create(person);
 console.log(atlas);
