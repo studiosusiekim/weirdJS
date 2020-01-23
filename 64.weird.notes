@@ -1,0 +1,51 @@
+[2020-01-23]
+Notes: ES6 and Classes
+Ideas: ES6 it's just another way to create objects, and to set the prototype.
+
+Classes in other programming languages are extraordinarily popular.
+
+They're a way of defining an object, defining what its methods and properties should be. The difference is that in other programming languages, class is not an object, it's just a definition, it's like a template.
+It tells you what objects should look like. But you don't actually get an object until you use that new key word.
+
+A JavaScript class defines an object. It is already an object and by using new, we are creating new objects from the object.
+
+
+[javascript]
+
+class Person {
+    constructor(firstname, lastname) { 
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+  
+    greet() {
+        return `Hi ${this.firstname}` 
+    }
+}
+
+const atlas = new Person ('Atlas', 'Dog');
+
+[end]
+
+We have a constructor that acts somewhat like the constructor functions that we've seen in that we can preset its values.
+
+To set the protoptype we use the keyword extend.
+And in my constructor, we can call the keyword super,
+which  will call the constructor of the object that is my prototype.
+
+Person is the object, the parent class.
+InformalPerson is the prototype and the child class, InformalPerson has all methods that Person has.
+
+[javascript]
+
+class InformalPerson extends Person {
+
+    constructor(firstname, lastname) { 
+          super(firstname, lastname);
+    }
+    greet() {
+        return `Yo ${firstname}` 
+    }
+}
+
+[end]
