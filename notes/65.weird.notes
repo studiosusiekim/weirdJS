@@ -1,0 +1,30 @@
+[2020-01-24]
+Chapter: Odds and Ends
+Ideas: Initializiation
+
+
+Clean and useful way to initialize data and prototyping.
+[javascript]
+const people = [
+    {
+        firstname: 'John',
+        lastname: 'Doe',
+        addresses: [
+            '111 Main. St.',
+            '222 Third St.'
+        ]
+    },
+    {
+        firstname: 'Jane',
+        lastname: 'Doe',
+        addresses: [
+            '333 Main. St.',
+            '444 Fifth St.' 
+        ],
+        greet: function() {
+            return 'Hello!'
+        }
+    }
+]
+
+[end]
