@@ -1,0 +1,62 @@
+[2020-01-26]
+Notes:66. 'typeof' , 'instanceof', and
+Figuring Out What Something Is
+Ideas:
+
+[javascript]
+
+
+var a = 3;
+console.log(typeof a); // primitive type of number not a a function constructed Number  
+
+var b = "Hello";
+console.log(typeof b); // string
+
+var c = {};
+console.log(typeof c); // object
+
+var d = [];
+console.log(typeof d); // object
+console.log(Object.prototype.toString.call(d)); // [object Array] 
+
+function Person(name) {
+    this.name = name;
+}
+
+
+
+var e = new Person('Jane');
+console.log(typeof e); // object
+console.log(e instanceof Person); // true
+
+console.log(typeof undefined); // undefined 
+console.log(typeof null); //  object - a bug since, like, forever...
+
+var z = function() { };
+console.log(typeof z); // function
+
+[end]
+
+typeof, which is an operator that accepts a parameter, but it's essentially
+a function returning a string, will tell you under most cases what something is.
+
+An instanceof, if you dealing with object chains,
+will tell you what something has in its prototype chain.
+
+[javascript]
+
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car('Honda', 'Accord', 1998);
+
+console.log(auto instanceof Car);
+// expected output: true
+
+console.log(auto instanceof Object);
+// expected output: true
+
+[end]
+
