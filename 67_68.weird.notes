@@ -1,0 +1,22 @@
+[2020-01-27]
+Notes: 67. Strict Mode
+Ideas: Strict mode can help you prevent errors under certain circumstances.
+
+
+Rather write the use stricz string on top of the file or on top of a function.
+
+
+"use strict";
+
+[javascript]
+
+var person;
+person = {};
+
+console.log(persom); 
+
+[end]
+
+Without strict mode it will log // {} object. window.persom
+With strict mode it will log  // undefined
+
